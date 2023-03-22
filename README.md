@@ -5,17 +5,21 @@ React native crypto
 ## Installation
 
 ```sh
-npm install react-native-crypto
+"react-native-crypto":"sergeymild/react-native-crypto#0.0.1"
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-crypto';
+import { crypto } from 'react-native-crypto';
 
 // ...
+// decrypt blowfish algorithm (supports only ECB)
+await crypto.blowfish.decrypt(encrypted, key)
+await crypto.blowfish.encrypt(plainText, key)
 
-const result = await multiply(3, 7);
+// get sha256 hash
+await crypto.sha256.hash(string)
 ```
 
 ## Contributing

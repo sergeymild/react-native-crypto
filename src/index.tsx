@@ -17,6 +17,20 @@ const Crypto = NativeModules.Crypto
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Crypto.multiply(a, b);
-}
+const blowfish = {
+  encrypt(value: string, key: string): Promise<string | undefined> {
+    return Crypto.blowfishEncrypt(value, key);
+  },
+
+  decrypt(value: string, key: string): Promise<string | undefined> {
+    return Crypto.blowfishDecrypt(value, key);
+  },
+};
+
+const sha256 = {
+  hash(value: string): Promise<string | undefined> {
+    return Crypto.sha256Hash(value);
+  },
+};
+
+export const crypto = { blowfish, sha256 };
