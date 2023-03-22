@@ -5,7 +5,7 @@ React native crypto
 ## Installation
 
 ```sh
-"react-native-crypto":"sergeymild/react-native-crypto#0.0.1"
+"react-native-crypto":"sergeymild/react-native-crypto#0.2.0"
 ```
 
 ## Usage
