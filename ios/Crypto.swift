@@ -29,9 +29,10 @@ class Crypto: NSObject {
     ) {
         do {
             let plaintext = Array(hex: value as String)
+            debugPrint("==== \(plaintext)")
             let decrypted = try Blowfish(key: (key as String).bytes, blockMode: ECB(), padding: .pkcs7).decrypt(plaintext)
             let str = String(bytes: decrypted, encoding: .utf8)!
-            
+            debugPrint("====2 \(decrypted)")
             resolve(str)
         } catch {
             resolve(nil)

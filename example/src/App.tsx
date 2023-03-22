@@ -28,7 +28,7 @@ export default function App() {
             });
         }}
       >
-        <Text>Encrypt</Text>
+        <Text>Decrypt</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -39,7 +39,7 @@ export default function App() {
             .then(setResult);
         }}
       >
-        <Text>Decrypt</Text>
+        <Text>Encrypt</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
